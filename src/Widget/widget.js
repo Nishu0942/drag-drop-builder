@@ -24,7 +24,7 @@ const Widget = (widget, updateWidgetContent) => {
               htmlFor={`file-upload-${widget.id}`}
               className="cursor-pointer block p-4 bg-gray-200 border border-gray-400 rounded hover:bg-gray-300 transition"
             >
-              {widget.content ? <img src={widget.content} alt="Uploaded" className="w-full h-32 object-cover" /> : "Upload Image"}
+              {widget.content ? <img src={widget.content} alt="Uploaded" className="w-full h-auto object-cover" /> : "Upload Image"}
             </label>
           </div>
         );
