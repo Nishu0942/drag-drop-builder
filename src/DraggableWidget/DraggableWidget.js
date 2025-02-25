@@ -11,7 +11,7 @@ const DraggableWidget = ({type, label, onAddWidget}) => {
       return (
         <div
           ref={drag}
-          className={`p-3 bg-blue-500 text-white rounded-md shadow-md text-center cursor-pointer transition-transform transform hover:scale-105 ${
+          className={`p-3 bg-blue-500 text-white m-4 rounded-md shadow-md text-center cursor-pointer transition-transform transform hover:scale-105 ${
             isDragging ? "opacity-50" : ""
           }`}
         >

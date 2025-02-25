@@ -34,7 +34,7 @@ const Canvas = ({ widgets, setWidgets }) => {
   return (
     <div
       ref={drop}
-      className={`w-full md:w-3/4 p-6 min-h-screen bg-gray-100 rounded-lg shadow-md transition-all border-2 ${
+      className={`md:w-3/4 p-6 min-h-screen bg-gray-100 rounded-lg shadow-md transition-all border-2 ${
         isOver ? "border-blue-500 bg-blue-50" : "border-gray-300"
       }`}
     >
@@ -43,7 +43,7 @@ const Canvas = ({ widgets, setWidgets }) => {
         {widgets.map((widget) => (
           <div
             key={widget.id}
-            className="p-4 bg-white rounded-md shadow-md border border-gray-400 relative"
+            className="p-4 bg-white rounded-md shadow-md border border-gray-400 relative max-w-full overflow-auto"
           >
             {Widget(widget, updateWidgetContent)}
             <button
