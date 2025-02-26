@@ -1,7 +1,7 @@
 import { Plus, Trash } from "lucide-react";
 import { useState, useEffect } from "react";
 
-const TableComponent = ({ widget, updateWidgetContent }) => {
+const TableComponent = ({ widget }) => {
   const [tableData, setTableData] = useState(
     widget.content || {
       columns: ["Column 1", "Column 2"],
@@ -51,10 +51,6 @@ const TableComponent = ({ widget, updateWidgetContent }) => {
       return { ...prev, rows: updatedRows };
     });
   };
-
-  useEffect(() => {
-    updateWidgetContent(widget.id, tableData);
-  }, [tableData]);
 
   return (
     <div className="w-full bg-white p-4 rounded-md shadow-lg border border-gray-300">

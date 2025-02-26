@@ -1,25 +1,17 @@
-import TableComponent from "../TableComponent/TableComponent";
-import UploadImage from "../UploadImage/UploadImage";
+import Button from "../Components/Button/Button";
+import Input from "../Components/InputComponent/input";
+import TableComponent from "../Components/TableComponent/TableComponent";
+import UploadImage from "../Components/UploadImage/UploadImage";
 const Widget = (widget, updateWidgetContent) => {
     switch (widget.type) {
       case "TEXT":
-        return (
-          <input
-            type="text"
-            value={widget.content}
-            onChange={(e) => updateWidgetContent(widget.id, e.target.value)}
-            placeholder="Enter text..."
-            className="p-2 border border-gray-400 rounded w-full"
-          />
-        );
+        return <Input widget={widget} updateWidgetContent={updateWidgetContent} />;
       case "IMAGE":
         return <UploadImage />;
       case "BUTTON":
-        return <button className="p-2 w-full bg-green-500 text-white rounded hover:bg-green-600 transition">
-        {widget.content || "Click Me"}
-      </button>
+        return <Button widget={widget} />
       case "TABLE":
-        return <TableComponent widget={widget} updateWidgetContent={updateWidgetContent} />;
+        return <TableComponent widget={widget} />;
 
       default:
         return <p>Unknown Widget</p>;
