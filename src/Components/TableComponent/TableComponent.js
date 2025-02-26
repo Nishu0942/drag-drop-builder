@@ -1,5 +1,5 @@
 import { Plus, Trash } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const TableComponent = ({ widget }) => {
   const [tableData, setTableData] = useState(

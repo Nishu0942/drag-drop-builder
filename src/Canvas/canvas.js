@@ -1,6 +1,7 @@
 import { useDrop, useDrag } from "react-dnd";
 import { useEffect, useRef } from "react";
 import Widget from "../Widget/widget";
+import { X } from 'lucide-react';
 
 const Canvas = ({ widgets, setWidgets }) => {
   const canvasRef = useRef(null);
@@ -94,7 +95,7 @@ const DraggableWidget = ({ widget, setWidgets, updateWidgetContent }) => {
         onClick={removeWidget}
         className="absolute top-1 right-1 p-1 text-xs bg-red-500 text-white rounded hover:bg-red-600 transition"
       >
-        ✖
+        <X />
       </button>
     </div>
   );
